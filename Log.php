@@ -1,6 +1,6 @@
 <?php
 
-namespace NCentral_GLPI\inc\Geracao;
+namespace inc\Geracao;
 
 class Log{    
     private string $logFile_dir = "log";
@@ -12,7 +12,7 @@ class Log{
         
         $logFile_dir = $baseDir . DIRECTORY_SEPARATOR . $this->logFile_dir;
         
-        $logFile = $logFile_dir . DIRECTORY_SEPARATOR . "NCentral_Glpi-" . date("Y") . ".log";
+        $logFile = $logFile_dir . DIRECTORY_SEPARATOR . "titulo-" . date("Y") . ".log";
         if(!file_exists($logFile_dir)){
             mkdir($logFile_dir, 0775, true);
         }
